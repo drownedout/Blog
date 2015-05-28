@@ -32,22 +32,22 @@
 	</div>
 
 	<div id="main_content">
-	    <div id="header">
-	    	<p>All Posts</p>
-	 
-	      <div class="buttons">
-	        <button class="button"><%= link_to "New Post", new_post_path %></button>
-	        <button class="button">Log Out</button>
-	      </div>
+    <div id="header">
+    	<p>All Posts</p>
+ 
+      <div class="buttons">
+        <button class="button"><%= link_to "New Post", new_post_path %></button>
+        <button class="button">Log Out</button>
+      </div>
 
-	    </div>
-	</div>
+    </div>
 
-<%= yield %>
+    <% flash.each do |name, msg| %>
+    <%= content_tag(:div, msg, class: "alert alert-#{name}") %>
+    <% end %>
 
-<% flash.each do |name, msg| %>
-<%= content_tag(:div, msg, class: "alert alert-#{name}") %>
-<% end %>
+    <%= yield %>
+  </div>
 
 </body>
 </html>
