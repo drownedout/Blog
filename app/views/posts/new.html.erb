@@ -12,13 +12,12 @@
           		</ul>
           	</div>
         <% end %>
-	  	<%= f.label :title %><br>
-		<%= f.text_field :title %><br>
-		<br>
-		<%= f.label :body %><br>
-		<%= f.text_field :body %><br>
-		<br>
-		<%= f.submit %>
+
+		<div id="page_wrapper">
+		  <h1>New Post</h1>
+		 
+		  <%= render 'form' %>
+		</div>
 	<% end %>
 
 </div>
